@@ -18,10 +18,13 @@ class App extends React.Component  {
 
     anime({
       targets: '.postRenderedTag',
-      translateX: 250,
-      rotate: '1turn',
-      backgroundColor: '#FFF',
-      duration: 800
+      translateX: [
+        {value: -250, duration: 1000, delay: 500},
+        {value: 000, duration: 1000, delay: 500},        
+        {value: 250, duration: 1000, delay: 500}
+      ],
+      easing: 'easeOutElastic(1, .8)',
+      loop: true
     });
 
     return
