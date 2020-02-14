@@ -13,7 +13,7 @@ class App extends React.Component  {
   clickHandler = (evt) => {
     evt.preventDefault()
     this.setState({
-      example: 'You changed the Hello World.'
+      example: 'You changed the World. Hello.'
     })
 
     anime({

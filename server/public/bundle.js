@@ -137,7 +137,7 @@ function (_React$Component) {
       evt.preventDefault();
 
       _this.setState({
-        example: 'You changed the Hello World.'
+        example: 'You changed the World. Hello.'
       });
 
       Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
