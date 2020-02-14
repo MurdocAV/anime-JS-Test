@@ -119,13 +119,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
- // anime({
-//   targets: 'div',
-//   translateX: 250,
-//   rotate: '1turn',
-//   backgroundColor: '#FFF',
-//   duration: 800
-// });
+
 
 var App =
 /*#__PURE__*/
@@ -145,6 +139,15 @@ function (_React$Component) {
       _this.setState({
         example: 'You changed the Hello World.'
       });
+
+      Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+        targets: '.postRenderedTag',
+        translateX: 250,
+        rotate: '1turn',
+        backgroundColor: '#FFF',
+        duration: 800
+      });
+      return;
     });
 
     _this.state = {
@@ -165,7 +168,9 @@ function (_React$Component) {
         className: "innerDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "animationDiv"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.example));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "postRenderedTag"
+      }, this.state.example));
     }
   }]);
 

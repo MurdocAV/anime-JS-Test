@@ -1,14 +1,6 @@
 import React from 'react'
 import anime from 'animejs/lib/anime.es.js';
 
-// anime({
-//   targets: 'div',
-//   translateX: 250,
-//   rotate: '1turn',
-//   backgroundColor: '#FFF',
-//   duration: 800
-// });
-
 class App extends React.Component  {
   constructor () {
     super ()
@@ -23,6 +15,16 @@ class App extends React.Component  {
     this.setState({
       example: 'You changed the Hello World.'
     })
+
+    anime({
+      targets: '.postRenderedTag',
+      translateX: 250,
+      rotate: '1turn',
+      backgroundColor: '#FFF',
+      duration: 800
+    });
+
+    return
   }
 
 
@@ -38,7 +40,7 @@ class App extends React.Component  {
           </div>
         </div>
         <br/>
-        <p>{this.state.example}</p>
+        <p className="postRenderedTag">{this.state.example}</p>
       </React.Fragment>
     )
   }
