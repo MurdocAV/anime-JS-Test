@@ -1,6 +1,8 @@
-.animeDiv {
-  bottom: 50vh;
-  width: 100px;
-  height: 200px;
-  background-color: black;
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute; //?? Dunno if needed.
 }

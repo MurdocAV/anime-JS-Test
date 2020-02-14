@@ -34,8 +34,7 @@ class App extends React.Component  {
               onClick={this.clickHandler}
             >Click me!</button>
           <div className="innerDiv">
-            <div className="animationDiv">
-            </div>
+            <div className="animationDiv"></div>
           </div>
         </div>
         <br/>
