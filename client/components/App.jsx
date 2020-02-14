@@ -20,7 +20,7 @@ class App extends React.Component  {
 
   clickHandler = (evt) => {
     evt.preventDefault()
-    this.setStat({
+    this.setState({
       example: 'You changed the Hello World.'
     })
   }

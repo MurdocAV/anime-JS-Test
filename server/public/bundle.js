@@ -142,7 +142,7 @@ function (_React$Component) {
     _defineProperty(_assertThisInitialized(_this), "clickHandler", function (evt) {
       evt.preventDefault();
 
-      _this.setStat({
+      _this.setState({
         example: 'You changed the Hello World.'
       });
     });
