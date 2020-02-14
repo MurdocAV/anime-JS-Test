@@ -20,7 +20,7 @@ class App extends React.Component  {
       targets: '.postRenderedTag',
       translateX: [
         {value: -250, duration: 1000, delay: 500},
-        {value: 000, duration: 1000, delay: 500},        
+        {value: 0, duration: 1000, delay: 500},        
         {value: 250, duration: 1000, delay: 500}
       ],
       easing: 'easeOutElastic(1, .8)',
