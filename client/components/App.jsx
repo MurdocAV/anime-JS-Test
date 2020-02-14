@@ -19,11 +19,12 @@ class App extends React.Component  {
     anime({
       targets: '.postRenderedTag',
       translateX: [
-        {value: -250, duration: 1000, delay: 500},
-        {value: 0, duration: 1000, delay: 500},        
-        {value: 250, duration: 1000, delay: 500}
+        {value: -250, duration: 1000, delay: 0},
+        {value: 0, duration: 1000, delay: 0},        
+        {value: 250, duration: 1000, delay: 0},
+        {value: 0, duration: 1000, delay: 0}
       ],
-      easing: 'easeOutElastic(1, .8)',
+      easing: 'linear',
       loop: true
     });
 

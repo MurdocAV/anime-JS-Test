@@ -145,17 +145,21 @@ function (_React$Component) {
         translateX: [{
           value: -250,
           duration: 1000,
-          delay: 500
+          delay: 0
         }, {
           value: 0,
           duration: 1000,
-          delay: 500
+          delay: 0
         }, {
           value: 250,
           duration: 1000,
-          delay: 500
+          delay: 0
+        }, {
+          value: 0,
+          duration: 1000,
+          delay: 0
         }],
-        easing: 'easeOutElastic(1, .8)',
+        easing: 'linear',
         loop: true
       });
       return;
