@@ -117,14 +117,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
-
-Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  targets: 'div',
-  translateX: 250,
-  rotate: '1turn',
-  backgroundColor: '#FFF',
-  duration: 800
-});
+ // anime({
+//   targets: 'div',
+//   translateX: 250,
+//   rotate: '1turn',
+//   backgroundColor: '#FFF',
+//   duration: 800
+// });
 
 var App =
 /*#__PURE__*/
@@ -141,8 +140,12 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "animeDiv"
-      }, "Hello World Div -> Let's animate."));
+        className: "wrapperDiv"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Click me!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "innerDiv"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "animationDiv"
+      }))));
     }
   }]);
 
