@@ -36,9 +36,13 @@ class App extends React.Component  {
     return (
       <React.Fragment>
         <div className="wrapperDiv">
-            <button className="activateAnime"
-              onClick={this.clickHandler}
-            >Click me!</button>
+          <h1>AnimeJS On Text</h1>
+          <button className="activateAnime"
+            onClick={this.clickHandler}
+          >Move around</button>
+          <button className="">
+            Change look
+          </button>
           <div className="innerDiv">
             <div className="animationDiv"></div>
           </div>

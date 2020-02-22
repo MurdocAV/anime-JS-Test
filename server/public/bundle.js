@@ -176,10 +176,12 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wrapperDiv"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "AnimeJS On Text"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "activateAnime",
         onClick: this.clickHandler
-      }, "Click me!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Move around"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: ""
+      }, "Change look"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "innerDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "animationDiv"
