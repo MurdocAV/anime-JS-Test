@@ -135,32 +135,54 @@ function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "moveAroundHandler", function (evt) {
       evt.preventDefault();
-      Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
-        targets: '.postRenderedTag',
-        translateX: [{
-          value: -250,
-          duration: 1000,
-          delay: 0
-        }, {
-          value: 0,
-          duration: 1000,
-          delay: 0
-        }, {
-          value: 250,
-          duration: 1000,
-          delay: 0
-        }, {
-          value: 0,
-          duration: 1000,
-          delay: 0
-        }],
-        easing: 'linear',
-        loop: true
-      });
+
+      if (_this.state.moving == 'Move Around') {
+        Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+          targets: '.postRenderedTag',
+          translateX: [{
+            value: -250,
+            duration: 1000,
+            delay: 0
+          }, {
+            value: 0,
+            duration: 1000,
+            delay: 0
+          }, {
+            value: 250,
+            duration: 1000,
+            delay: 0
+          }, {
+            value: 0,
+            duration: 1000,
+            delay: 0
+          }],
+          easing: 'linear',
+          loop: true
+        });
+
+        _this.setState({
+          moving: 'Stop Moving'
+        });
+      } else if (_this.state.moving != 'Move Around') {
+        animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"].remove('.postRenderedTag');
+
+        _this.setState({
+          moving: 'Move Around'
+        });
+      }
     });
 
     _defineProperty(_assertThisInitialized(_this), "changeLookHandler", function (evt) {
       evt.preventDefault();
+      Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+        targets: '.postRenderedTag',
+        color: '#FF69B4',
+        easing: 'easeInOutQuad'
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "changeWordingHandler", function (evt) {
+      evt.preventDefault(); // Setting state to something new.
 
       _this.setState({
         example: 'You changed the World. Hello.'
@@ -168,7 +190,9 @@ function (_React$Component) {
     });
 
     _this.state = {
-      example: 'Hello World'
+      example: 'Hello World',
+      moving: 'Move Around',
+      colorState: false
     };
     return _this;
   }
@@ -179,12 +203,15 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wrapperDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "AnimeJS On Text"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "activateAnime",
+        className: "moving",
         onClick: this.moveAroundHandler
-      }, "Move around"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, this.state.moving), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "",
         onClick: this.changeLookHandler
-      }, "Change look"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Change look"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "",
+        onClick: this.changeWordingHandler
+      }, "Change wording"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "innerDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "animationDiv"
