@@ -30,7 +30,7 @@ class App extends React.Component  {
 
   changeLookHandler = (evt) => {
     evt.preventDefault()
-    
+
     this.setState({
       example: 'You changed the World. Hello.'
     })
@@ -44,7 +44,7 @@ class App extends React.Component  {
           <button className="activateAnime"
             onClick={this.moveAroundHandler}
           >Move around</button>
-          <button className="">
+          <button className="" onClick={this.changeLookHandler}>
             Change look
           </button>
           <div className="innerDiv">

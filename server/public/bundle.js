@@ -182,7 +182,8 @@ function (_React$Component) {
         className: "activateAnime",
         onClick: this.moveAroundHandler
       }, "Move around"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: ""
+        className: "",
+        onClick: this.changeLookHandler
       }, "Change look"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "innerDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
