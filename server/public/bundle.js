@@ -176,23 +176,49 @@ function (_React$Component) {
       evt.preventDefault();
       Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
         targets: '.postRenderedTag',
-        color: '#FF69B4',
+        color: _this.state.color,
         easing: 'easeInOutQuad'
       });
+
+      if (_this.state.color == '#FF69B4') {
+        _this.setState({
+          color: '#000000'
+        });
+      } else if (_this.state.color != '#FF69B4') {
+        _this.setState({
+          color: '#FF69B4'
+        });
+      }
     });
 
     _defineProperty(_assertThisInitialized(_this), "changeWordingHandler", function (evt) {
-      evt.preventDefault(); // Setting state to something new.
+      evt.preventDefault();
 
-      _this.setState({
-        example: 'You changed the World. Hello.'
-      });
+      if (_this.state.example != 'Hello World') {
+        Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+          targets: '.postRenderedTag',
+          easing: 'linear',
+          update: _this.setState({
+            example: 'Hello World'
+          })
+        });
+      } else {
+        Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+          targets: '.postRenderedTag',
+          easing: 'linear',
+          update: _this.setState({
+            example: 'You changed the World. Hello.'
+          })
+        });
+      } // Setting state to something new.
+
     });
 
     _this.state = {
       example: 'Hello World',
       moving: 'Move Around',
-      colorState: false
+      colorState: false,
+      color: '#FF69B4'
     };
     return _this;
   }

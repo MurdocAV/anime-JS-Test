@@ -64,10 +64,25 @@ class App extends React.Component  {
   changeWordingHandler = (evt) => {
     evt.preventDefault()
 
+    if (this.state.example != 'Hello World') {
+      anime({
+        targets: '.postRenderedTag',
+        easing: 'linear',
+        update: this.setState({
+          example: 'Hello World'
+        })
+      })    
+    } else {
+      anime({
+        targets: '.postRenderedTag',
+        easing: 'linear',
+        update: this.setState({
+          example: 'You changed the World. Hello.'
+        })
+      })
+    }
+
     // Setting state to something new.
-    this.setState({
-      example: 'You changed the World. Hello.'
-    })
   }
 
   render() {
