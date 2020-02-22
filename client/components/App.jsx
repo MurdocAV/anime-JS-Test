@@ -10,11 +10,10 @@ class App extends React.Component  {
     }
   }
 
-  clickHandler = (evt) => {
+
+
+  moveAroundHandler = (evt) => {
     evt.preventDefault()
-    this.setState({
-      example: 'You changed the World. Hello.'
-    })
 
     anime({
       targets: '.postRenderedTag',
@@ -27,10 +26,15 @@ class App extends React.Component  {
       easing: 'linear',
       loop: true
     });
-
-    return
   }
 
+  changeLookHandler = (evt) => {
+    evt.preventDefault()
+    
+    this.setState({
+      example: 'You changed the World. Hello.'
+    })
+  }
 
   render() {
     return (
@@ -38,7 +42,7 @@ class App extends React.Component  {
         <div className="wrapperDiv">
           <h1>AnimeJS On Text</h1>
           <button className="activateAnime"
-            onClick={this.clickHandler}
+            onClick={this.moveAroundHandler}
           >Move around</button>
           <button className="">
             Change look

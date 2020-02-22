@@ -133,13 +133,8 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this));
 
-    _defineProperty(_assertThisInitialized(_this), "clickHandler", function (evt) {
+    _defineProperty(_assertThisInitialized(_this), "moveAroundHandler", function (evt) {
       evt.preventDefault();
-
-      _this.setState({
-        example: 'You changed the World. Hello.'
-      });
-
       Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
         targets: '.postRenderedTag',
         translateX: [{
@@ -162,7 +157,14 @@ function (_React$Component) {
         easing: 'linear',
         loop: true
       });
-      return;
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "changeLookHandler", function (evt) {
+      evt.preventDefault();
+
+      _this.setState({
+        example: 'You changed the World. Hello.'
+      });
     });
 
     _this.state = {
@@ -178,7 +180,7 @@ function (_React$Component) {
         className: "wrapperDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "AnimeJS On Text"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "activateAnime",
-        onClick: this.clickHandler
+        onClick: this.moveAroundHandler
       }, "Move around"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: ""
       }, "Change look"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
