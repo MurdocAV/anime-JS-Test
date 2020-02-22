@@ -8,7 +8,8 @@ class App extends React.Component  {
     this.state = {
       example: 'Hello World',
       moving: 'Move Around',
-      colorState: false
+      colorState: false,
+      color: '#FF69B4'
     }
   }
 
@@ -46,9 +47,17 @@ class App extends React.Component  {
 
     anime({
       targets: '.postRenderedTag',
-      color: '#FF69B4',
+      color: this.state.color,
       easing: 'easeInOutQuad'
     })
+
+    if (this.state.color == '#FF69B4') {
+      this.setState({color: '#000000'})
+    } else if (this.state.color != '#FF69B4') {
+      this.setState({
+        color: '#FF69B4'
+      })
+    }
 
   }
 
