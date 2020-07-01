@@ -210,8 +210,7 @@ function (_React$Component) {
             example: 'You changed the World. Hello.'
           })
         });
-      } // Setting state to something new.
-
+      }
     });
 
     _this.state = {

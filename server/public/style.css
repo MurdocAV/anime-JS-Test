@@ -10,4 +10,8 @@ body {
   height: 100vh;
   position: absolute;
 }
+
+html {
+  background-color: pink;
+}
 /*# sourceMappingURL=style.css.map */

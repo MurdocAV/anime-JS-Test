@@ -81,8 +81,6 @@ class App extends React.Component  {
         })
       })
     }
-
-    // Setting state to something new.
   }
 
   render() {
