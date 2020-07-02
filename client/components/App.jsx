@@ -19,14 +19,27 @@ class App extends React.Component  {
     if (this.state.moving == 'Move Around') {
       anime({
         targets: '.postRenderedTag',
-        translateX: [
-          {value: -250, duration: 1000, delay: 0},
-          {value: 0, duration: 1000, delay: 0},        
-          {value: 250, duration: 1000, delay: 0},
-          {value: 0, duration: 1000, delay: 0}
-        ],
-        easing: 'linear',
-        loop: true
+
+        translateX: {
+          value: -250,
+          duration: 1000
+        },
+
+        translateX: {
+          value: 250,
+          duration: 1000
+        },
+
+      
+
+      //   translateX: {[
+      //     {value: -250, duration: 1000, delay: 0},
+      //     {value: 0, duration: 1000, delay: 0},        
+      //     {value: 250, duration: 1000, delay: 0},
+      //     {value: 0, duration: 1000, delay: 0}
+      //   ],}
+      //   easing: 'linear',
+      //   loop: true
       });
 
       this.setState({

@@ -137,28 +137,16 @@ function (_React$Component) {
       evt.preventDefault();
 
       if (_this.state.moving == 'Move Around') {
-        Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+        Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_defineProperty({
           targets: '.postRenderedTag',
-          translateX: [{
+          translateX: {
             value: -250,
-            duration: 1000,
-            delay: 0
-          }, {
-            value: 0,
-            duration: 1000,
-            delay: 0
-          }, {
-            value: 250,
-            duration: 1000,
-            delay: 0
-          }, {
-            value: 0,
-            duration: 1000,
-            delay: 0
-          }],
-          easing: 'linear',
-          loop: true
-        });
+            duration: 1000
+          }
+        }, "translateX", {
+          value: 250,
+          duration: 1000
+        }));
 
         _this.setState({
           moving: 'Stop Moving'
